@@ -1,0 +1,54 @@
+<div id="wrapper">
+	<h2> Your Gold: </h2> 
+	<p> <%= session[:gold] %> </p>
+	<form action="/reset" method="POST">
+		<input type="hidden" name="authenticity_token" value = "<%= form_authenticity_token %>" >
+		<input type="submit" value="Start">
+	</form>
+</div>
+<div id="info">
+	<div class="ninja">
+		<h2> Farm </h2>
+		<h3> (earns 10-20 gold) </h3>
+		<form action='/farm' method='POST'>
+			<input type="hidden" name="authenticity_token" value = "<%= form_authenticity_token %>" >
+			<input type="hidden" name="rpg[ninja]" value="farm" />
+			<input type="submit" value="Find Gold!" />
+		</form>
+	</div>
+    <div class="ninja">
+		<h2> Cave </h2>
+		<h3> (earns 5-10 gold) </h3>
+		<form action='/cave' method='POST'>
+			<input type="hidden" name="authenticity_token" value = "<%= form_authenticity_token %>" >
+			<input type="hidden" name="rpg[ninja]" value="cave" />
+			<input type="submit" value="Find Gold!" />
+		</form>
+	</div>
+    <div class="ninja">
+		<h2> House </h2>
+		<h3> (earns 2-5 gold) </h3>
+		<form action='/house' method='POST'>
+			<input type="hidden" name="authenticity_token" value = "<%= form_authenticity_token %>" >
+			<input type="hidden" name="rpg[ninja]" value="house" />
+			<input type="submit" value="Find Gold!" />
+		</form>
+	</div>
+    <div class="ninja">
+		<h2> Casino </h2>
+		<h3> (earns/takes 0-50 gold) </h3>
+		<form action='/casino' method='POST'>
+			<input type="hidden" name="authenticity_token" value = "<%= form_authenticity_token %>" >
+			<input type="hidden" name="rpg[ninja]" value="casino" />
+			<input type="submit" value="Find Gold!" />
+		</form>
+	</div>
+		<fieldset>
+            <legend>Activities:</legend>
+			<div id="activities"> 
+				    <% if session[:info].any? %>
+					<% session[:info].reverse_each do |element| %>
+					<p> <%= element["pop"] %> </p>
+					<% end %>
+				<% end %>
+        </fieldset>

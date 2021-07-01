@@ -1,0 +1,56 @@
+// Place all the styles related to the Rpg controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+    background: url('https://cdna.artstation.com/p/assets/images/images/022/347/748/large/kraft-maru-dungeon-devil-2.jpg?1575089736');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.ninja{
+    border: 2px solid black;
+    width: 160px;
+    text-align: center;
+    margin: 30px 10px auto;
+    display: inline-block;
+    height: 150px;
+    padding: 20px;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ7VB-6Rgdc1rF3DmUafkfO2WmlegrQ6UNFA&usqp=CAU');
+    background-size: cover;
+    color: yellow;
+}
+#info{
+    margin: 0px 20px auto;
+    text-align: center;
+    justify-content: center;
+}
+fieldset{
+    padding-top: 20px;
+    width: 700px;
+    margin: 50px auto;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ7VB-6Rgdc1rF3DmUafkfO2WmlegrQ6UNFA&usqp=CAU'), gray;
+    background-size: contain;
+    background-blend-mode: overlay;
+}
+#wrapper{
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+}
+legend{
+    color: yellow;
+    font-size: 20px;
+    font-weight: 800;
+}
+input{
+    border-radius: 20px;
+    padding: 7px;
+    background: darkorange;
+    font-weight: bolder;
+}
+h2{
+    color: gold;
+}
+p{
+    font-size: 15px;
+    color: gold;
+}
